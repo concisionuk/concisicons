@@ -5,7 +5,6 @@
       v-model="active"
       class="color-mode-toggle"
       :modes="modes"
-      :active="active"
     />
   </div>
 </template>

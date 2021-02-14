@@ -1,3 +1,3 @@
-import { Component } from 'vue'
+import { VueConstructor } from 'vue'
 
-export const ColorModeToggle: Component
+export const ColorModeToggle: VueConstructor

@@ -3,7 +3,7 @@
     role="button"
     aria-label="Toggle colour theme"
     class="themetoggler"
-    :class="active"
+    :class="value"
     @click="cycleModes()"
   >
     <i class="themetoggler-icon">
@@ -25,15 +25,14 @@ export default {
       type: Array,
       default: () => ['system', 'dark', 'light'],
     },
-    active: {
+    value: {
       type: String,
       required: true,
     },
   },
-  emits: ['input'],
   methods: {
     cycleModes() {
-      const currentIndex = this.modes.indexOf(this.active)
+      const currentIndex = this.modes.indexOf(this.value)
       const nextIndex = (currentIndex + 1) % this.modes.length
       this.$emit('input', this.modes[nextIndex])
     },
@@ -99,7 +98,7 @@ $ts: 0.5s;
     bottom: -0.5em;
 
     display: block;
-    width: 0.13em;
+    width: 2px;
     border-radius: 1px;
 
     background: linear-gradient(
