@@ -1,6 +1,6 @@
 <template>
   <button
-    role="button"
+    type="button"
     aria-label="Toggle colour theme"
     class="themetoggler"
     :class="value"
